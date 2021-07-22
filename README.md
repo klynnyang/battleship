@@ -2,7 +2,7 @@
 Battleship is a browser based version of the strategy type guessing game Battleship, created for General Assembly's Software Engineering Immersive program. 
 <p>Below is a screen show of the game displayed in browser</p>
 
-<img src="//images/Screenshot.png">
+![Screenshot](images/Screenshot.png)
 
 <p>
 <h2><b>Technologies Used</b></h2>
