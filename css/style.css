@@ -10,7 +10,7 @@ header {
   border: 2px dotted rgb(120, 184, 214);
 }
 body {
-  background-image: url("https://github.com/klynnyang/battleship/blob/master/images/shutterstock_1017239779.png");
+  background-image: url('../images/shutterstock_1017239779.png');
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
