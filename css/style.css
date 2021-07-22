@@ -282,3 +282,27 @@ p {
     transform: translate(-50%, -50%);
   }
 }
+
+@media only screen and (max-width: 570px) {
+  .player, .ai {
+    width: 380px;
+    height: 380px;
+  }
+  .game-grid {
+    display: grid;
+    height: 1040px;
+    grid-template-rows: 20px 400px 20px 400px 20px 30px 1fr;
+    background: rgb(240, 240, 240);
+    margin: 0 auto;
+    z-index: 0;
+  }
+  #game-name {
+    font-size: 30px;
+  }
+  header, .game-status, #btn1, #btn2, #btn3, .disclaimer, .ship-type {
+    font-size:10px;
+  }
+  .num{
+    width:15px;
+  }
+}
