@@ -90,12 +90,12 @@ body {
 .disclaimer {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight:500;
+  font-weight: bold;
   justify-content: center;
   grid-column: span 2;
   padding: 5px;
   background: rgb(255, 255, 255, 0.7);
-  border: 1px dotted rgb(120, 184, 214);
+  border: 1px solid rgb(120, 184, 214);
 }
 
 .player,
@@ -128,7 +128,13 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   background: rgb(255, 255, 255, 0.9);
-  border: 1px dotted rgb(120, 184, 214);
+  border-left: 1px solid rgb(120, 184, 214);
+  border-right: 1px solid rgb(120, 184, 214);
+}
+
+.ship1, .ship2, .ship3, .ship4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .ship-container {
@@ -136,9 +142,9 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column: span 2;
   gap: 10px;
-  padding: 0px 20px;
+  padding: 3px 20px;
   background: rgb(255, 255, 255, 0.9);
-  border: 1px dotted rgb(120, 184, 214);
+  border: 1px solid rgb(120, 184, 214);
 }
 
 .player-info,
