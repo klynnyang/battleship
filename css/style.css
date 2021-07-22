@@ -254,8 +254,8 @@ p {
 @media only screen and (max-width: 1030px) {
   .game-grid {
     display: grid;
-    height: 1040px;
-    grid-template-rows: 20px 500px 20px 500px 1fr;
+    height: 1300px;
+    grid-template-rows: 20px 500px 30px 40px 1fr 20px 500px 1fr;
     background: rgb(240, 240, 240);
     margin: 0 auto;
     z-index: 0;
@@ -270,11 +270,11 @@ p {
   }
   .computer-info {
     grid-column: 1 / span 2;
-    grid-row: 3;
+    grid-row: 6;
   }
   .ai {
     grid-column: 1 / span 2;
-    grid-row: 4;
+    grid-row: 7;
   }
   #overlay {
     top: 75%;
@@ -289,12 +289,8 @@ p {
     height: 380px;
   }
   .game-grid {
-    display: grid;
-    height: 900px;
-    grid-template-rows: 20px 400px 20px 400px 20px 30px 1fr;
-    background: rgb(240, 240, 240);
-    margin: 0 auto;
-    z-index: 0;
+    height: 1070px;
+    grid-template-rows: 20px 400px 20px 30px 1fr 20px 400px 1fr;
   }
   #game-name {
     font-size: 30px;
@@ -313,8 +309,8 @@ p {
     height: 320px;
   }
   .game-grid {
-    height: 800px;
-    grid-template-rows: 20px 340px 20px 340px 20px 30px 1fr;
+    height: 980px;
+    grid-template-rows: 20px 350px 15px 30px 1fr 20px 350px 1fr;
   }
   header, .game-status, #btn1, #btn2, #btn3, .disclaimer, .ship-type {
     font-size:8px;
