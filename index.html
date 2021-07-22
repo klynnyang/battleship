@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Ship</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#">
+  </head>
+  <body>
+    <audio id="explosion">
+      <source src="sound/mixkit-sea-mine-explosion-1184.wav" type="audio/wav" />
+    </audio>
+    <audio id="sea-sound" autoplay loop>
+      <source
+        src="sound/mixkit-small-waves-harbor-rocks-1208.wav"
+        type="audio/wav"
+      />
+    </audio>
+    <audio id="ship-sound">
+      <source src="sound/mixkit-jumping-into-water-1304.wav" type="audio/wav" />
+    </audio>
+    <audio id="winning-sound">
+      <source
+        src="sound/mixkit-game-level-completed-2059.wav"
+        type="audio/wav"
+      />
+    </audio>
+    <audio id="losing-sound">
+      <source
+        src="sound/mixkit-player-losing-or-failing-2042.wav"
+        type="audio/wav"
+      />
+    </audio>
+    <audio id="game-start">
+      <source src="sound/mixkit-warfare-horn-2289.wav" type="audio/wav" />
+    </audio>
+    <header>
+      <div id="music">Sound: ON&nbsp</div>
+      <div id="game-name">BATTLE SHIP</div>
+      <div id="size">
+        Board size
+        <ul class="dropdown">
+          <li id="small" data-size="8">SMALL</li>
+          <li id="medium" data-size="10" class="select">MEDIUM</li>
+          <li id="large" data-size="12">LARGE</li>
+        </ul>
+      </div>
+    </header>
+    <div class="game-status">
+      <div id="player-down">
+        Player Ship remaining:
+        <span></span>
+      </div>
+      <div id="turn">
+        TURN:
+        <span></span>
+      </div>
+      <div id="computer-down">
+        Computer Ship remaining:
+        <span></span>
+      </div>
+    </div>
+    <div class="game-button">
+      <button id="btn1">START</button>
+      <button id="btn2">RESTART</button>
+    </div>
+    <div id="overlay">
+      GAME OVER
+      <p><span></span></p>
+      <button id="btn3">RESTART</button>
+    </div>
+    <div class="game-grid">
+      <div class="player-info">Player</div>
+      <div class="computer-info">Computer</div>
+      <div class="ripple"></div>
+      <div class="player"></div>
+      <div class="ai"></div>
+      <div class="disclaimer">Please pick 5 ships of various sizes</div>
+      <div class="ship-type">
+        <div class="ship1">
+          <input
+            class="num"
+            type="number"
+            id="destroyer"
+            value="1"
+            max="5"
+            min="1"
+            onkeydown="return false"
+          />
+          Destroyer
+        </div>
+        <div class="ship2">
+          <input
+            class="num"
+            type="number"
+            id="sub-cru"
+            value="2"
+            max="5"
+            min="1"
+            onkeydown="return false"
+          />
+          Submarine/Cruiser
+        </div>
+        <div class="ship3">
+          <input
+            class="num"
+            type="number"
+            id="battleship"
+            value="1"
+            max="5"
+            min="1"
+            onkeydown="return false"
+          />Battleship
+        </div>
+        <div class="ship4">
+          <input
+            class="num"
+            type="number"
+            id="carrier"
+            value="1"
+            max="5"
+            min="1"
+            onkeydown="return false"
+          />Carrier
+        </div>
+      </div>
+      <div class="ship-container">
+        <div class="s-ship-container"></div>
+        <div class="m-ship-container"></div>
+        <div class="l-ship-container"></div>
+        <div class="xl-ship-container"></div>
+      </div>
+    </div>
+    <script defer src="javascript/main.js"></script>
+  </body>
+</html>

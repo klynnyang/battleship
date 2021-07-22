@@ -1,0 +1,265 @@
+* {
+  font-family: "Black Ops One", Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  margin: 10px;
+  border: 2px dotted rgb(120, 184, 214);
+}
+body {
+  background-image: url("https://github.com/klynnyang/battleship/blob/master/images/shutterstock_1017239779.png");
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 100% 140%;
+}
+
+#game-name {
+  font-size: 50px;
+}
+
+#size {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#music {
+  cursor: pointer;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  color: black;
+  width: 80px;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown li:hover {
+  background-color: #9dd9f3;
+}
+
+#size:hover .dropdown {
+  display: block;
+}
+
+#size ul .select {
+  background-color: #9dd9f3;
+}
+
+.game-status,
+.game-button {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.game-grid {
+  display: grid;
+  height: 520px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 500px 30px 25px 240px;
+  background: rgb(240, 240, 240);
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  grid-column: span 2;
+  padding: 5px;
+  background: rgb(255, 255, 255, 0.7);
+  border: 1px dotted rgb(120, 184, 214);
+}
+
+.player,
+.ai {
+  display: grid;
+  width: 480px;
+  padding: 5px 20px 20px 20px;
+  border-radius: 15px;
+  grid-auto-rows: minmax(5%, 15%);
+  margin: 0 auto;
+}
+
+.grid-item {
+  padding: 10px;
+  font: 20px "Mansalva", Arial, sans-serif;
+  color: red;
+  background-color: #9dd9f3;
+  border: 2px dotted #89cff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ship-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: span 2;
+  gap: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgb(255, 255, 255, 0.9);
+  border: 1px dotted rgb(120, 184, 214);
+}
+
+.ship-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: span 2;
+  gap: 10px;
+  padding: 0px 20px;
+  background: rgb(255, 255, 255, 0.9);
+  border: 1px dotted rgb(120, 184, 214);
+}
+
+.player-info,
+.computer-info {
+  margin: 0 auto;
+}
+
+.hover:hover {
+  background-color: rgb(120, 184, 214);
+  cursor: pointer;
+}
+
+.s-ship-container,
+.m-ship-container,
+.l-ship-container,
+.xl-ship-container {
+  display: flex;
+  grid-gap: 5px;
+}
+
+.size {
+  background: rgb(179, 179, 179);
+}
+
+.size-edge-top {
+  border-radius: 15px 15px 0px 0px;
+}
+.size-edge-bottom {
+  border-radius: 0px 0px 15px 15px;
+}
+.size-edge-left {
+  border-radius: 15px 0px 0px 15px;
+}
+.size-edge-right {
+  border-radius: 0px 15px 15px 0px;
+}
+
+.taken {
+  background: rgb(179, 179, 179);
+}
+
+.hit {
+  background-color: red;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.num {
+  font-size: 10px;
+  width: 30px;
+  border: 1px solid #9dd9f3;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+#overlay {
+  border: 2px solid #89cff0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  z-index: 1;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(240, 240, 240);
+}
+
+#overlay span {
+  font-size: 15px;
+}
+
+p {
+  margin: 0;
+  line-height: 0.2;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1030px) {
+  .game-grid {
+    display: grid;
+    height: 1040px;
+    grid-template-rows: 20px 500px 20px 500px 1fr;
+    background: rgb(240, 240, 240);
+    margin: 0 auto;
+    z-index: 0;
+  }
+  .player {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  .player-info {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .computer-info {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  .ai {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  #overlay {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ripple {
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  transform: scale(0);
+  background: rgba(123, 197, 240, 0.801);
+  border-radius: 50%;
+  position: fixed;
+}
+
+.animate {
+  animation: ripple 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
