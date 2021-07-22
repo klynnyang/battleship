@@ -6,7 +6,7 @@ const hitByComputer = document.querySelector("#player-down > span");
 const gameEndMessage = document.querySelector("#overlay span");
 const turn = document.querySelector("#turn > span");
 const start = document.getElementById("btn1");
-const reset = document.getElementById("btn2");
+const resetLocation = document.getElementById("btn2");
 const reset2 = document.getElementById("btn3");
 const smallShip = document.querySelector(".s-ship-container");
 const mediumShip = document.querySelector(".m-ship-container");
@@ -88,8 +88,14 @@ xLargeNum.addEventListener("input", function(){
 
 //GAME CLICK BUTTONS//
 sound.addEventListener("click", soundToggle);
-reset.addEventListener("click", resetHistory);
-reset2.addEventListener("click", resetHistory);
+resetLocation.addEventListener("click", function(){
+  createGrid(10);
+  resetHistory();
+});
+reset2.addEventListener("click", function(){
+  createGrid(10);
+  resetHistory();
+});
 start.addEventListener("click", startGame); 
 
 //GAME FUNCTIONS//
@@ -135,7 +141,7 @@ function initialize() {
   clickShip();
   dragShip();
   dropShip();
-  reset.disabled = true;
+  resetLocation.disabled = true;
   start.disabled = true;
   checkStart(listOfPlayerArray);
 }
@@ -443,6 +449,7 @@ function checkValidHorizontal(array, arraycheck) {
 function checkStart(finalArray){
   if(finalArray.length >= 1){
     start.disabled = false;
+    resetLocation.disabled = false;
 }
 }
 
@@ -473,7 +480,7 @@ function startGame() {
     startAudio.currentTime = 0;
   }
   start.disabled = true;
-  reset.disabled = false;
+  resetLocation.disabled = true;
   smallNum.disabled = true;
   mediumNum.disabled = true;
   largeNum.disabled = true;
@@ -668,7 +675,6 @@ function renderWinningMessage(){
     winningAudio.currentTime = 0;
     disableMissleAfterWin();
     gameEndMessage.parentNode.parentNode.style.display = "block";
-    reset.disabled = true;
   }
   else if (listOfPlayerArray.length === 0) {
     for (let grid of aiGrid.querySelectorAll(".taken-c")) {
@@ -680,7 +686,6 @@ function renderWinningMessage(){
     losingAudio.currentTime = 0;
     disableMissleAfterWin();
     gameEndMessage.parentNode.parentNode.style.display = "block";
-    reset.disabled = true;
   }
 }
 
@@ -713,7 +718,7 @@ function resetHistory() {
   largeNum.value = 1;
   xLargeNum.value = 1;
   start.disabled = true;
-  reset.disabled = true;
+  resetLocation.disabled = true;
   smallNum.disabled = false;
   mediumNum.disabled = false;
   largeNum.disabled = false;
@@ -723,8 +728,6 @@ function resetHistory() {
   }
   clearAllShips();
   makeStandardShip();
-  emptyInitialGrid();
-  createGrid(10);
   initialize();
 }
 

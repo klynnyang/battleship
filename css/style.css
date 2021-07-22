@@ -26,6 +26,17 @@ body {
   display: inline-block;
   cursor: pointer;
 }
+#btn1, #btn2 {
+  display:inline-block;
+  padding:0.35em 1.0em;
+  border:0.1em solid #f1f1f1;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2px;
+  box-sizing: border-box;
+  font-weight:300;
+  text-align:center;
+  transition: all 0.2s;
+}
 
 #music {
   cursor: pointer;
