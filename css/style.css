@@ -283,14 +283,14 @@ p {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
   .player, .ai {
     width: 380px;
     height: 380px;
   }
   .game-grid {
     display: grid;
-    height: 1040px;
+    height: 900px;
     grid-template-rows: 20px 400px 20px 400px 20px 30px 1fr;
     background: rgb(240, 240, 240);
     margin: 0 auto;
@@ -304,5 +304,25 @@ p {
   }
   .num{
     width:15px;
+  }
+}
+
+@media only screen and (max-width: 432px) {
+  .player, .ai {
+    width: 320px;
+    height: 320px;
+  }
+  .game-grid {
+    height: 800px;
+    grid-template-rows: 20px 340px 20px 340px 20px 30px 1fr;
+  }
+  header, .game-status, #btn1, #btn2, #btn3, .disclaimer, .ship-type {
+    font-size:8px;
+  }
+  header, .game-status, .game-button{
+    margin: 5px;
+  }
+  .player-info, .computer-info{
+   font-size: 15px;
   }
 }
