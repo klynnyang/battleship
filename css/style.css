@@ -33,7 +33,7 @@ body {
   margin:0 0.3em 0.3em 0;
   border-radius:2px;
   box-sizing: border-box;
-  font-weight:300;
+  font-family: Arial, Helvetica, sans-serif;
   text-align:center;
   transition: all 0.2s;
 }
@@ -89,6 +89,8 @@ body {
 
 .disclaimer {
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:500;
   justify-content: center;
   grid-column: span 2;
   padding: 5px;
@@ -111,7 +113,7 @@ body {
   font: 20px "Mansalva", Arial, sans-serif;
   color: red;
   background-color: #9dd9f3;
-  border: 2px dotted #89cff0;
+  border: 1px dotted #89cff0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,8 +220,32 @@ p {
   margin-left: 10px;
   margin-right: 10px;
 }
+.ripple {
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  transform: scale(0);
+  background: rgba(123, 197, 240, 0.801);
+  border-radius: 50%;
+  position: fixed;
+}
 
-@media (max-width: 1030px) {
+.animate {
+  animation: ripple 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (max-width: 1030px) {
   .game-grid {
     display: grid;
     height: 1040px;
@@ -248,29 +274,5 @@ p {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-
-.ripple {
-  width: 8px;
-  height: 8px;
-  opacity: 0;
-  transform: scale(0);
-  background: rgba(123, 197, 240, 0.801);
-  border-radius: 50%;
-  position: fixed;
-}
-
-.animate {
-  animation: ripple 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(10);
-    opacity: 0;
   }
 }
