@@ -11,6 +11,8 @@ This battleship browser game was created with HTML, CSS and Javascript.
 <h2><b>Getting Started</b></h2>
 This browser game is accessable through the link below:
 
+https://klynnyang.github.io/battleship/
+
 <h3><u>Some features of the game includes:</u></h3>
 <li>The board size is adjustable: small(8x8), medium(10x10) and large(12x12).</li>
 <li>The ships are placed on the board through drag and drop. Clicking on the ship before placement will change the direction of the ship.</li>
